@@ -37,7 +37,7 @@ mysql> select * from t2;
 And we want to update 'project_status' of specific 'project_name' (myproj2 in this case):
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"project_name": "myproj2", "project_status": "running"}' localhost:5000
+curl -H "Content-Type: application/json" -X POST -d '{"project_name": "myproj2", "project_status": "running"}' localhost:5000/update
 ```
 Will result:
 ```
@@ -45,8 +45,8 @@ mysql> select * from t2;
 +--------------+----------------+
 | project_name | project_status |
 +--------------+----------------+
-| babu         | stopped        |
-| bla          | running        |
+| myproj         | stopped      |
+| myproj2        | running      |
 +--------------+----------------+
 2 rows in set (0.00 sec)
 ```

@@ -8,7 +8,7 @@ app = Flask(__name__)
 table="t2"
 
 
-@app.route("/", methods=['POST'])
+@app.route("/update", methods=['POST'])
 def update_status():
     #print request.get_json()
     project = ProjectStatus(request.get_json())
